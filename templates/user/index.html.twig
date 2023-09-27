@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Espace Utilisateurs{% endblock %}
+
+{% block body %}
+
+    <div class="form-wrapper">
+
+        <div class="login-wrap">
+            <h3 class="connect-title">Déjà un compte ? Connectez-vous !</h3>
+
+            <div class="user-register">
+                {{ form_start(loginForm) }}
+                {{ form_row(loginForm.pseudo) }}
+                {{ form_row(loginForm.password) }}
+                {{ form_row(loginForm.sent) }}
+                {{ form_end(loginForm) }}
+            </div>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="register-wrap">
+            <h3 class="connect-title">Nouveau ? Inscrivez-vous !</h3>
+
+            <div class="user-register">
+                {{ form_start(registerForm) }}
+                {{ form_row(registerForm.pseudo) }}
+                {{ form_row(registerForm.age) }}
+                {{ form_row(registerForm.password) }}
+                {{ form_row(registerForm.sent) }}
+                {{ form_end(registerForm) }}
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

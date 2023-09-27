@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ article.name }}{% endblock %}
+
+
+{% block body %}
+
+    <div class="single-article-show">
+
+            <h1>{{ article.name }}</h1>
+            <p>{{ article.content }}</p>
+
+    </div>
+{% endblock %}

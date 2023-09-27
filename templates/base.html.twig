@@ -2,8 +2,9 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        <link rel="stylesheet" href="{{ asset('asset/style.css') }}">
+        <title>{% block title %}Blog des 2BCI{% endblock %}</title>
+
         {% block stylesheets %}
         {% endblock %}
 
@@ -11,6 +12,13 @@
         {% endblock %}
     </head>
     <body>
+        <header class="header">
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/articles">Articles</a></li>
+                <li><a href="/user">Connexion</a></li>
+            </ul>
+        </header>
         {% block body %}{% endblock %}
     </body>
 </html>
